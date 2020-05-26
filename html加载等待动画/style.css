@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000222;
+}
+#circle {
+  stroke-dasharray: 63;
+  stroke-dashoffset: 0;
+  transform-origin: center center;
+  animation: rotate 1s linear infinite, stroke 3s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stroke {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 63;
+  }
+  100% {
+    stroke-dashoffset: 126;
+  }
+}

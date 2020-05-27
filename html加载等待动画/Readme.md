@@ -1,6 +1,6 @@
 # 知识点
 
-- [ ] meta中viewpoint的含义
+- [ ] meta中viewport的含义
 - [ ] svg的用法
 - [ ] circle的用法
 - [ ] box-sizing

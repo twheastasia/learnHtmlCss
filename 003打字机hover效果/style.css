@@ -5,7 +5,8 @@
 }
 body {
   display: flex;
-  justify-content: center;
+  /* justify-content设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。 */
+  justify-content: center; 
   align-items: center;
   min-height: 100vh;
   background: #1c234a;
@@ -18,21 +19,25 @@ ul li {
   margin: 0 20px;
   font-size: 4em;
 }
+/* 左侧标记默认是透明的 */
 ul li span {
   position: relative;
   top: -2px;
   left: -10px;
   color: transparent;
 }
+/* 只有当li处于houver时有颜色，自然就被看到了 */
 ul li:hover span {
   color: #ef0448;
 }
+/* a标签有默认的颜色 */
 ul li a {
   position: relative;
   color: rgba(255,255,255,0.1);
   text-decoration: none;
   font-weight: 700;
 }
+/* 在a标签默认颜色前还挡了一层绿色 */
 ul li a:before {
   content: attr(data-text);
   position: absolute;
@@ -41,10 +46,14 @@ ul li a:before {
   color: #1bfaad;
   white-space: nowrap;
   overflow: hidden;
-
 }
+/* 当ul处于hover时，所有a标签前面挡的一层宽度从最宽变成最小 */
 ul:hover li a:before {
   animation: animate 0.5s steps(11) forwards;
+}
+/* 当ul中某个li处于hover时，该a标签前面的遮罩再从0变成征程宽度 */
+ul li:hover a:before {
+  animation: animate2 2s steps(11) forwards;
 }
 @keyframes animate {
   0% {
@@ -53,9 +62,6 @@ ul:hover li a:before {
   100% {
     width: 0px;
   }
-}
-ul li:hover a:before {
-  animation: animate2 2s steps(11) forwards;
 }
 @keyframes animate2 {
   0% {

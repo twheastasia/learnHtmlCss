@@ -1,6 +1,8 @@
 * {
+  /* 消除内外边距 */
   margin: 0;
   padding: 0;
+  /* user-select 属性规定是否能选取元素的文本。 */
   user-select: none;
 }
 
@@ -12,17 +14,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 渐变 */
   background-image: linear-gradient(120deg, #40b3ff, #d97aff);
 }
 
 .card {
   position: relative;
+  /* transform-style 属性规定如何在 3D 空间中呈现被嵌套的元素。 */
+  /* preserve-3d	子元素将保留其 3D 位置。 */
   transform-style: preserve-3d;
   width: 300px;
   height: 450px;
+  /* 鼠标手型 */
   cursor: pointer;
+  /* box-shadow 属性向框添加一个或多个阴影。
+  box-shadow: h-shadow v-shadow blur spread color inset; */
   box-shadow: 1px 1px 20px rgba(0,0,0,0.05);
-  animation: rotate-reserve 1s cubic-bezier(0.76, -0.51, 0.29, 1.5) forwards;
+  /* 动画 */
+  /* animation: rotate-reserve 1s cubic-bezier(0.76, -0.51, 0.29, 1.5) forwards; */
 }
 
 p {
@@ -37,8 +46,10 @@ p {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  /* 项目在行之前、行之间和行之后留有空间。 */
+  justify-content: space-around;
   align-items: center;
+  /* flex-direction 属性规定弹性项目的方向。 */
   flex-direction: column;
   border-radius: 30px;
   background-color: #fff;
